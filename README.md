@@ -1,2 +1,3 @@
 # chef-platform_docker
-Docker installation for the platform
+
+Extraced from the base cookbook, this onlt installs docker.

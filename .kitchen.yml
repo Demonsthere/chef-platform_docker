@@ -1,0 +1,20 @@
+---
+driver:
+  name: vagrant
+  customize:
+    nictype1: 'virtio'
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: debian8_local
+    driver:
+      box: debian8_local
+      box_url: "http://apache.pitux.ovh/data/vagrant/debian8_local"
+
+suites:
+  - name: default
+    run_list:
+      - recipe[platform_docker::default]
+    attributes:
